@@ -70,7 +70,7 @@ gabinetes y más. Diseñado para ser intuitivo y adaptable a pequeñas o mediana
 | id                     | INT       | Identificador único del equipo (PK, autoincremental) |
 | estado                 | VARCHAR   | Estado del equipo (Activo, Inactivo, Dañado, etc.) |
 | empresa                | VARCHAR   | Empresa a la que pertenece el equipo         |
-| co                     | INT       | Código interno o identificador adicional     |
+| co                     | VARCHAR   | Código interno o identificador adicional     |
 | ciudad                 | VARCHAR   | Ciudad donde se encuentra el equipo          |
 | area                   | VARCHAR   | Área o departamento asignado                 |
 | nombre_equipo          | VARCHAR   | Nombre del equipo en la red o inventario     |

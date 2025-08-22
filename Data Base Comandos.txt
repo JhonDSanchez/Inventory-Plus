@@ -52,7 +52,7 @@ CREATE TABLE Equipos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     estado VARCHAR(50) NOT NULL,
     empresa VARCHAR(100) NOT NULL,
-    co INT NOT NULL,
+    co VARCHAR(50) NOT NULL,
     ciudad VARCHAR(100) NOT NULL,
     area VARCHAR(100) NOT NULL,
     nombre_equipo VARCHAR(100) NOT NULL,

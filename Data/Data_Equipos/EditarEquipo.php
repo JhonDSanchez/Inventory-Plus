@@ -138,7 +138,6 @@ if (!$equipo || !$detalles) {
             <?php endif; ?>
 
             <form method="POST" action="">
-                <!-- hidden id para identificar en POST -->
                 <input type="hidden" name="id_equipo" value="<?php echo htmlspecialchars($detalles['id']); ?>">
 
                 <div class="form-section">
@@ -176,24 +175,32 @@ if (!$equipo || !$detalles) {
                         </div>
                         <div>
                             <label>Empresa</label>
-                            <select name="empresa">
+                            <select id="empresa" name="empresa">
                                 <option value="MaxiCassa" <?php if ($detalles['empresa'] == 'MaxiCassa') echo 'selected'; ?>>MaxiCassa</option>
-                                <option value="Otra" <?php if ($detalles['empresa'] == 'Otra') echo 'selected'; ?>>Otra</option>
+                                <option value="Tu Cassa" <?php if ($detalles['empresa'] == 'Tu Cassa') echo 'selected'; ?>>Tu Cassa</option>
+                                <option value="PegoMax" <?php if ($detalles['empresa'] == 'PegoMax') echo 'selected'; ?>>PegoMax</option>
+                                <option value="Innova Pack" <?php if ($detalles['empresa'] == 'Innova Pack') echo 'selected'; ?>>Innova Pack</option>
+                                <option value="Max Construcciones" <?php if ($detalles['empresa'] == 'Max Construcciones') echo 'selected'; ?>>Max Construcciones</option>
                             </select>
                         </div>
                         <div>
                             <label>CO</label>
-                            <select name="co">
-                                <option value="99" <?php if ($detalles['co'] == '99') echo 'selected'; ?>>99</option>
-                                <option value="98" <?php if ($detalles['co'] == '98') echo 'selected'; ?>>98</option>
+                            <select id="co" name="co">
+                          
+                                <option value="<?= $detalles['co']; ?>" selected>
+                                    <?= $detalles['co']; ?>
+                                </option>
+
+                                <?php foreach ($cos as $co): ?>
+                                    <option value="<?= $co['codigo']; ?>"><?= $co['codigo']; ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                         <div>
                             <label>Ciudad</label>
-                            <select name="ciudad">
-                                <option value="Bogota" <?php if ($detalles['ciudad'] == 'Bogota') echo 'selected'; ?>>Bogota</option>
-                                <option value="Medellin" <?php if ($detalles['ciudad'] == 'Medellin') echo 'selected'; ?>>Medellín</option>
-                            </select>
+                            <input type="text" id="ciudad" name="ciudad" 
+                                value="<?= isset($detalles['ciudad']) ? htmlspecialchars($detalles['ciudad']) : '' ?>" 
+                                readonly>
                         </div>
                         <div>
                             <label>Área</label>
@@ -291,6 +298,8 @@ if (!$equipo || !$detalles) {
         </div>
     </article>
 </section>
+
+<script src="../../JS/COequipos.js"></script>
 
 </body>
 <footer>
