@@ -46,6 +46,32 @@ CREATE TABLE detalles_movimiento (
     FOREIGN KEY (id_articulo) REFERENCES productos(id)
 );
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------Crear tabla de Equopos
+
+CREATE TABLE Equipos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    estado VARCHAR(50) NOT NULL,
+    empresa VARCHAR(100) NOT NULL,
+    co INT NOT NULL,
+    ciudad VARCHAR(100) NOT NULL,
+    area VARCHAR(100) NOT NULL,
+    nombre_equipo VARCHAR(100) NOT NULL,
+    usuario VARCHAR(100) NOT NULL,
+    asignado_a VARCHAR(100) NOT NULL,
+    fabricante VARCHAR(100) NOT NULL,
+    tipo_computador VARCHAR(50) NOT NULL,
+    marca_procesador VARCHAR(100) NOT NULL,
+    generacion_procesador VARCHAR(100) NOT NULL,
+    velocidad_procesador VARCHAR(50) NOT NULL,
+    ram INT NOT NULL,
+    tipo_disco VARCHAR(50) NOT NULL,
+    windows VARCHAR(50) NOT NULL,
+    dispositivos_wifi VARCHAR(10) NOT NULL,
+    propietario VARCHAR(100) NOT NULL,
+    placa_proveedor VARCHAR(50) NOT NULL,
+    serial VARCHAR(50) NOT NULL
+);
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------Crear Registros Usuarios (Ayudara a ver como se ve la pagina con mas usuarios)
 
 INSERT INTO usuarios (CC, UserDB, PassDB, RoleDB, NameDB) VALUES
@@ -100,30 +126,3 @@ INSERT INTO productos (id, nombre, descripcion, precio, cantidad, fecha_creacion
 -----------------------------------------------------------------------------------------------------------------------------------------------------------Fin
 -----------------------------------------------------------------------------------------------------------------------------------------------------------Fin
 -----------------------------------------------------------------------------------------------------------------------------------------------------------Fin
-
-Prueba
-
--- Tabla única 'Equipos' con todos los campos necesarios
-CREATE TABLE Equipos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    estado VARCHAR(50) NOT NULL,
-    empresa VARCHAR(100) NOT NULL,
-    co INT NOT NULL,
-    ciudad VARCHAR(100) NOT NULL,
-    area VARCHAR(100) NOT NULL,
-    nombre_equipo VARCHAR(100) NOT NULL,
-    usuario VARCHAR(100) NOT NULL,
-    asignado_a VARCHAR(100) NOT NULL,
-    fabricante VARCHAR(100) NOT NULL,
-    tipo_computador VARCHAR(50) NOT NULL,
-    marca_procesador VARCHAR(100) NOT NULL,
-    generacion_procesador VARCHAR(100) NOT NULL,
-    velocidad_procesador VARCHAR(50) NOT NULL,
-    ram INT NOT NULL,
-    tipo_disco VARCHAR(50) NOT NULL,
-    windows VARCHAR(50) NOT NULL,
-    dispositivos_wifi VARCHAR(10) NOT NULL,
-    propietario VARCHAR(100) NOT NULL,
-    placa_proveedor VARCHAR(50) NOT NULL,
-    serial VARCHAR(50) NOT NULL
-);

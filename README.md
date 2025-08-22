@@ -62,3 +62,29 @@ gabinetes y más. Diseñado para ser intuitivo y adaptable a pequeñas o mediana
 | id_movimiento| INT      | FK a `movimientos.id`                     |
 | id_articulo  | INT      | FK a `productos.id`                       |
 | cantidad     | INT      | Cantidad involucrada                      |
+
+
+#### Tabla: `Equipos`
+| Campo                 | Tipo      | Descripción                                  |
+|------------------------|-----------|----------------------------------------------|
+| id                     | INT       | Identificador único del equipo (PK, autoincremental) |
+| estado                 | VARCHAR   | Estado del equipo (Activo, Inactivo, Dañado, etc.) |
+| empresa                | VARCHAR   | Empresa a la que pertenece el equipo         |
+| co                     | INT       | Código interno o identificador adicional     |
+| ciudad                 | VARCHAR   | Ciudad donde se encuentra el equipo          |
+| area                   | VARCHAR   | Área o departamento asignado                 |
+| nombre_equipo          | VARCHAR   | Nombre del equipo en la red o inventario     |
+| usuario                | VARCHAR   | Usuario asignado al equipo                   |
+| asignado_a             | VARCHAR   | Persona a la que está asignado el equipo     |
+| fabricante             | VARCHAR   | Fabricante del equipo                        |
+| tipo_computador        | VARCHAR   | Tipo (Escritorio, Portátil, Servidor, etc.)  |
+| marca_procesador       | VARCHAR   | Marca del procesador (Intel, AMD, etc.)      |
+| generacion_procesador  | VARCHAR   | Generación del procesador (ej: i5 10th Gen)  |
+| velocidad_procesador   | VARCHAR   | Velocidad del procesador (ej: 3.2 GHz)       |
+| ram                    | INT       | Memoria RAM en GB                            |
+| tipo_disco             | VARCHAR   | Tipo de disco (HDD, SSD, NVMe)               |
+| windows                | VARCHAR   | Versión de Windows instalada                 |
+| dispositivos_wifi      | VARCHAR   | Indica si tiene WiFi (Sí/No)                 |
+| propietario            | VARCHAR   | Propietario del equipo (empresa/área)        |
+| placa_proveedor        | VARCHAR   | Número de placa del proveedor                |
+| serial                 | VARCHAR   | Número de serie del equipo                   |
